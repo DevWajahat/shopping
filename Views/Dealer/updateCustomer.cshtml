@@ -1,0 +1,24 @@
+﻿@model Customer;
+<div class="container-fluid px-4">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Update Customer Details</h2>
+</div>
+
+<div class="row">
+    <div classs="col-md-2"></div>
+    <div classs="col-md-8">
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" name="customer_id" value="@Model.Customer_id" />
+            <input type="text" name="customer_name" value="@Model.Customer_name" class="form-control my-3" />
+            <input type="text" name="customer_phone" value="@Model.Customer_phone" class="form-control my-3" />
+            <input type="text" name="customer_email" value="@Model.Customer_email" class="form-control my-3" />
+            <input type="text" name="customer_password" value="@Model.Customer_password" class="form-control my-3" />
+            <input type="text" name="customer_gender" value="@Model.Customer_gender" class="form-control my-3" />
+            <input type="text" name="customer_country" value="@Model.Customer_country" class="form-control my-3" />
+            <input type="text" name="customer_city" value="@Model.Customer_city" class="form-control my-3" />
+            <input type="text" name="customer_address" value="@Model.Customer_address" class="form-control my-3" />
+            <input type="file" name="customer_image" class="form-control my-3" />
+            <input type="submit" class="btn btn-primary" value="Update Customer" />
+        </form>
+    </div>
+    <div classs="col-md-2"></div>
+</div>

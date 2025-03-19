@@ -1,0 +1,33 @@
+﻿@model List<Product>
+@foreach (var product in Model)
+{
+
+	<div class="col col-lg-4 mt-3 item">
+		<a href="@Url.Action("productDetails","Customer",new{id=product.product_id})" class="link" style="text-decoration:none;">
+		<div class="card card-custom" style="width: 18rem">
+			<img src="@("~/product_images/"+product.product_image)" asp-append-version="true" width="100%" height="100%" 
+			class="card-img-top"
+			alt="@product.product_name" />
+			<div class="card-body text-dark">
+				<h5 class="card-title">@product.product_name</h5>
+					
+				<div class="d-flex justify-content-between align-items-center">
+					
+						<form asp-action="AddToCart" method="post">
+
+						<div class="row d-flex">
+
+                            <input type="hidden" name="product_id" value="@product.product_id" />
+								<span class="font-weight-bold">Rs.@product.product_price</span>
+								<input type="submit" name="" class="btn btn-primary btn-custom col-lg-12" width="98%" value="Add To cart" />
+							</div>
+						</form>
+				</div>
+				
+				</div>
+		</div>
+		</a>
+	</div>
+
+
+}

@@ -1,0 +1,21 @@
+﻿@model Product
+<div class="container-fluid px-4">
+    <h2 class="mt-4 text-center text-danger text-uppercase" style="letter-spacing:4px">Are you sure you want to delete this Product</h2>
+</div>
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <ul class="list-group">
+
+            <li class="list-group-item">Product  Id : @Model.product_id</li>
+            <li class="list-group-item">Product Name : @Model.product_name</li>
+          
+        </ul>
+
+        <a href="@Url.Action("deleteproduct","Dealer",new{id=Model.product_id})" class="btn btn-danger">Delete </a>
+        <a href="@Url.Action("fetchProduct","Dealer")" class="btn btn-warning">Back to list</a>
+
+    </div>
+    <div class="col-md-2">
+    </div>

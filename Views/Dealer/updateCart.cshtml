@@ -1,0 +1,28 @@
+﻿@model shoppingCart.Models.Cart
+
+@{
+    ViewData["Title"] = "updateCart";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4">
+      <form method="post">
+          <input type="hidden" name="cart_id" value="@Model.cart_id"/>
+            <input type="hidden" name="product_id" value="@Model.product_id" />
+            <input type="hidden" name="customer_id" value="@Model.customer_id" />
+            <input type="hidden" name="product_quantity" value="@Model.product_quantity" />
+          <select name="cart_status" class="form-select my-3">
+              <option value="0">Pending</option>
+              <option value="1">Order</option>
+              <input type="submit" value="Update Cart" class="btn btn-primary"/>
+          </select>
+      </form>
+      
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

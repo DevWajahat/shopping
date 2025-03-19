@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    min-height:100vh;
+}
+:root {
+  --primary-color: #8e6ff7;
+  --dark-color: #000;
+  --light-color: #fff;
+}
+/* button styling */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.btn-primary:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--light-color) !important;
+}
+.text-primary {
+  color: var(--primary-color) !important;
+}
+/* header */
+.main-navbar {
+  border-bottom: 1px solid var(--dark-color);
+  background-color: var(--light-color);
+}
+.main-navbar .top-navbar {
+  background-color: var(--light-color);
+  padding: 10px 0;
+}
+.main-navbar .top-navbar .brand-name {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.main-navbar .top-navbar .nav-link {
+  color: var(--dark-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-navbar .top-navbar .nav-link:hover {
+  color: var(--primary-color);
+}
+.main-navbar .navbar {
+  background-color: var(--light-color);
+}
+.main-navbar .navbar .nav-item .nav-link {
+  padding: 10px 20px;
+  color: var(--dark-color);
+  font-size: 15px;
+}
+.main-navbar .navbar .nav-item .nav-link:hover {
+  color: var(--primary-color);
+}
+.form-control.rounded-pill {
+  border-radius: 50px;
+}
+.search-form {
+  position: relative;
+}
+.search-btn {
+  position: absolute;
+  right: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-navbar .top-navbar .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+/* /header */
+
+/* Product slider */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--light-color);
+  color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet-active {
+  background: var(--primary-color);
+}
+/* /slider */
+
+.card-custom {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-custom img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.btn-custom {
+  background-color: #a855f7;
+  color: white;
+}
+.btn-custom:hover {
+  background-color: #9333ea;
+}
+
+/* product slider */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--light-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color);
+}
+/* /slider */
+
+.card-custom {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .card-custom img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+.btn-custom {
+    background-color: #a855f7;
+    color: white;
+}
+
+    .btn-custom:hover {
+        background-color: #9333ea;
+    }
+
+
+.productSwiper .swiper-button-prev,
+.productSwiper .swiper-button-next {
+    color: var(--primary-color) !important;
+    background-color: var(--light-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #000 !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 10;
+}
+
+.productSwiper {
+    overflow: hidden;
+}
+
+.product-swiper-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    /* position: relative; */
+}
+
+.productSwiper .swiper-button-prev::after,
+.productSwiper .swiper-button-next::after {
+    font-size: 24px;
+}
+/* product slider */
+
+
+
+/**
+  Demo only
+*/
+.note {
+    text-align: center;
+    font-size: 14px;
+    max-width: 960px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    opacity: .8;
+    a
+
+{
+    color: black;
+    font-weight: bold;
+    &:hover, &:focus
+
+{
+    color: royalblue;
+}
+
+}
+}
+
+
+/**
+  Demo only
+*/
+.note {
+    text-align: center;
+    font-size: 14px;
+    max-width: 960px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    opacity: .8;
+    a
+
+{
+    color: black;
+    font-weight: bold;
+    &:hover, &:focus
+
+{
+    color: royalblue;
+}
+
+}
+}
+/* /product slider */
+/* categorycard */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  height: 350px;
+  box-shadow: 1px 5px 3px rgb(0, 0, 0),1px 5px 3px rgba(0, 0, 0, 1),;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.category-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.category-card .overlay h2 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.category-card .overlay button {
+  background: white;
+  color: black;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+/* /categorycard */
+/* reviews */
+/* .reviews-container .swiper-button-next, .swiper-button-prev {
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+
+/* /reviews */
+/* /footer */
+  
+
+.text-primary-custom {
+  color: #8e6ff7 !important;
+}
+.bg-light-custom {
+  background-color: #f3f0ff !important;
+}

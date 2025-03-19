@@ -1,0 +1,43 @@
+﻿@model List<Dealer>
+@if (Model != null && Model.Count > 0)
+{
+    <div class="container-fluid px-4">
+        <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">My Profile</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form method="post">
+                <input type="hidden" name="Dealer_id" value="@Model[0].Dealer_id" />
+                <input type="text" name="Dealer_name" placeholder="Enter your Name" value="@Model[0].Dealer_name" class="form-control my-3" />
+                <input type="text" name="Dealer_email" placeholder="Enter your Email" value="@Model[0].Dealer_email" class="form-control my-3" />
+                <input type="password" name="Dealer_password" placeholder="Enter your Password" value="@Model[0].Dealer_password" class="form-control my-3" />
+                <input type="hidden" name="Dealer_image" value="@Model[0].Dealer_image" />
+                <input type="submit" value="Update Profile" class="form-control my-3 btn btn-primary" />
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form method="post" asp-action="ChangeProfileImage" enctype="multipart/form-data">
+                <input type="hidden" name="Dealer_id" value="@Model[0].Dealer_id" />
+                <input type="hidden" name="Dealer_name" placeholder="Enter your Name" value="@Model[0].Dealer_name" class="form-control my-3" />
+                <input type="hidden" name="Dealer_email" placeholder="Enter your Email" value="@Model[0].Dealer_email" class="form-control my-3" />
+                <input type="hidden" name="Dealer_password" placeholder="Enter your Password" value="@Model[0].Dealer_password" class="form-control my-3" />
+                <input type="file" name="Dealer_image" class="form-control my-3" value="" />
+                <img src="@("~/dealer_image/"+Model[0].Dealer_image)" style="width=250px;height=250px" asp-append-version="true" />
+                <br />
+                <input type="submit" value="Change Image" class="btn btn-primary" />
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        Dealer information is not available.
+    </div>
+}

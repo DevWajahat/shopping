@@ -1,0 +1,39 @@
+﻿@model List<Product>
+<div class="container-fluid px-4">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">All Products</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <a asp-controller="Dealer" asp-action="addproduct" class="btn btn-primary">Add Product</a>
+        <table class="table text-center table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product no</th>
+                    <th>Product Image</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var prod in Model)
+                    {
+                    <tr>
+                        <td>@prod.product_name</td>
+                        <td>@prod.product_price</td>
+                        <td>@prod.product_no</td>
+                        <td><img src="@("~/product_images/"+prod.product_image)" asp-append-version="true" width="100" height="100" /></td>
+                        <td>
+                            <a href="@Url.Action("productDetails","Dealer",new{id=@prod.product_id})" class="btn btn-info">Details</a>
+                            <a href="@Url.Action("updateproduct","Dealer",new{id=@prod.product_id})" class="btn btn-warning">Update</a>
+                            <a href="@Url.Action("deletePermissionProduct","Dealer",new{id=@prod.product_id})" class="btn btn-danger">Delete</a>    
+                        </td>
+                    </tr>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
